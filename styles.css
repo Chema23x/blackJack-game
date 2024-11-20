@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(17, 77, 17);
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-size: x-large;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px 0;
+}
+.btn-container > button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border-width: 0px;
+    font-weight: 600;
+    color: white;
+}
+
+.btn-container > button:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+button:nth-child(1){
+    background-color: red;
+}
+button:nth-child(2){
+    background-color: blue;
+}
+button:nth-child(3){
+    background-color: rgb(36, 132, 170);
+}
