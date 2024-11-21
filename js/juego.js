@@ -1,13 +1,13 @@
 
 import { cards } from "./cards.js";
 
-let playerScore = document.querySelector("#playerScore");
-let pcScore = document.querySelector("#botScore");
-let newGame = document.querySelector("#newGame");
-let askForCardBtn = document.querySelector("#askForCard");
-let playerCards = document.querySelector("#player-cards-container");
-let botCards = document.querySelector("#bot-cards-container")
-let stop = document.querySelector("#stopPlayerCard")
+const playerScore = document.querySelector("#playerScore");
+const pcScore = document.querySelector("#botScore");
+const newGame = document.querySelector("#newGame");
+const askForCardBtn = document.querySelector("#askForCard");
+const playerCards = document.querySelector("#player-cards-container");
+const botCards = document.querySelector("#bot-cards-container")
+const stop = document.querySelector("#stopPlayerCard")
 
 let score = 0;
 let botScore = 0;
@@ -20,6 +20,7 @@ askForCardBtn.addEventListener("click", () => {
     score += count(randomCard);
     playerScore.textContent = score;
     if(score > 21){
+        askForCardBtn.disabled = true;
         computerCards(); 
         alert("La computadora gana");;  
     } 
@@ -46,6 +47,7 @@ newGame.addEventListener("click", () => {
     botScore = 0
     pcScore.textContent = 0;
     botCards.textContent = "";
+    askForCardBtn.disabled = false;
 })
 
 // Carta de la computadora
