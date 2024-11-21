@@ -1,6 +1,7 @@
 
 import { cards } from "./cards.js";
 
+(() => {
 const playerScore = document.querySelector("#playerScore");
 const pcScore = document.querySelector("#botScore");
 const newGame = document.querySelector("#newGame");
@@ -72,3 +73,4 @@ function computerCards (){
             alert("El jugador gana")
         }
     })
+})();
